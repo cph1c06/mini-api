@@ -16,8 +16,8 @@ We want to build a simple API interface prototype
 def health_check():
     return "", 200
 ```
-4. Breifly read through the source code and build the docker image. Push this to your docker repository. If you may, please leave us a simple script in `hack/` for testing the docker image locally
-5. Gain acces to the Kubernetes cluster. Deploy your images from docker repository. (_Please leave your deployment files in `config/`_)
+4. Briefly read through the source code and build the docker image. Push this to your docker repository. If you may, please leave us a simple script in `hack/` for testing the docker image locally
+5. Gain access to the Kubernetes cluster. Deploy your images from docker repository. (_Please leave your deployment files in `config/`_)
 6. After ensuring the functionality of your application on Kubernetes, please add the healthcheck functionallity using the `/health` endpoint you have added, to ensure the application is alive
 7. To increase scalability of the application, please avoid hard-coding your `API_KEY` and `FLASK_PORT`. Store these into **secrets** and **configmaps** respectively
 8. Deploy gitops tools, e.g., `fluxcd` or `argocd` to the cluster, so that whenever you have pushed a new image to docker repository, the latest version of image will be deployed automatically
@@ -39,6 +39,6 @@ In your submission we would like to have your repository structurized like this:
 
 `src/`: Containing scripts
 
-`config/`: The configuration files, possibly including your Dockerfile, kubernetes, CI/CD configuration files
+`config/`: The configuration files, possibly including your Dockerfile, Kubernetes, CI/CD configuration files
 
 `hack/`: (optional) some random quick-hack one-liners you find useful and convenient to use
